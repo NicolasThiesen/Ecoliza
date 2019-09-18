@@ -8,7 +8,6 @@
     float:right;
     display:flex;
     width: 550px;
-    margin-right: 50px;
   }
 a{
     text-decoration: none;
@@ -16,9 +15,6 @@ a{
     font-size: 17px;  
     margin-top: 20px;
     width: 200px;
-  }
-  .buttons a{
-    margin-left: 30px;
   }
  
   .main-header button{

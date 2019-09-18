@@ -34,8 +34,8 @@ h2{
     float:left;
     margin-left: 20%;
 }
-button{
-    margin: 0 36%;
+.box button{
+    margin: 10% 36%;
     margin-bottom: 10%;
     cursor:pointer;
     color: white;
@@ -45,6 +45,22 @@ button{
     border:none;
     border-radius: 3px;
 }
-button:hover{
+.box button:hover{
     background:#0d5b27;
+    color: whitesmoke;
+}
+#input-imagem {
+    margin-top: 3%;
+    border-bottom: none; 
+}   
+select{
+    text-align: center;
+    margin: 0 10%;
+    padding: .375rem .75rem;
+    font-size: 15px;
+    border: 1px solid #1c6134;
+    margin-top: -1%; 
+}
+.labelimg{
+    margin: 0 40%;
 }
