@@ -16,7 +16,6 @@ module.exports = {
     },
     async store(req,res){
         const ponto = await Ponto.create(req.body); 
-        
         return res.json(ponto);
     }
     

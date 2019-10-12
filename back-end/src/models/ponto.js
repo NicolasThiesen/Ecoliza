@@ -9,11 +9,7 @@ const PontoSchema = new mongoose.Schema({
         type:String,
         required:true,
     },
-    number:{
-        type: String,
-        required:true,
-    },
-    complement:{
+    description:{
         type:String,
         required:true,
     },
