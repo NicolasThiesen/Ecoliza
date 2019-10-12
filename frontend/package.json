@@ -17,7 +17,28 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "rules": {
+      "no-extend-native": "off",
+      "object-curly-newline": [
+        "error",
+        {
+          "ObjectPattern": {
+            "multiline": true
+          },
+          "ImportDeclaration": {
+            "multiline": true
+          },
+          "ExportDeclaration": {
+            "multiline": true
+          }
+        }
+      ],
+      "semi": [
+        "error",
+        "never"
+      ]
+    }
   },
   "browserslist": {
     "production": [
