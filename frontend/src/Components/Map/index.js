@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import ReactMap, {GeolocateControl,NavigationControl,Marker,Popup} from "react-map-gl";
 import api from "../../services/api";
-import point from "./point.png";
-import "./style.css"
+import point from "../../img/search-icon.png";
+import "./style.css";
 export default function Map()  {
   const [market,setMarket] = useState([]);
   const [filter,setFilter] = useState( );
@@ -40,6 +40,9 @@ export default function Map()  {
         setViewport(viewport);
       }}
       >
+        <div className="search">
+          <input></input>
+        </div>
         {market.map(ponto => (
           <Marker
           key={ponto._id}
