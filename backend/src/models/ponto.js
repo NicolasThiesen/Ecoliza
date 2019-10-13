@@ -14,8 +14,12 @@ const PontoSchema = new mongoose.Schema({
         required:true,
     },
     trash_type:{
-        type:String,
-        required:true,
+        type:Array,
+        required:true
+    },
+    location:{
+        type: Array,
+        required:true
     },
     createdAt:{
         type: Date,

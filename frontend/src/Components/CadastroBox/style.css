@@ -55,7 +55,7 @@ h2{
 }   
 select{
     text-align: center;
-    margin: 4% 30%;
+    margin: 4% 36%;
     padding: .375rem .75rem;
     font-size: 15px;
     border: 1px solid #1c6134; 
@@ -63,19 +63,3 @@ select{
 .labelimg{
     margin: 0 40%;
 }
-.file {
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-  }
-  .file button{
-      width: 200px;
-      font-size: 12px;
-  }
-  .file input[type=file] {
-    font-size: 100px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0;
-  }

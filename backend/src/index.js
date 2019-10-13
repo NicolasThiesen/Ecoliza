@@ -6,7 +6,7 @@ const mongoose = require ('mongoose');
 
 const app = express();
 
-mongoose.connect('mongodb://localhost:27017/noderest',{useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb+srv://user:wzk9ENLkehcjRuf6@7week-mxm99.mongodb.net/Ecoliza?retryWrites=true&w=majority',{useNewUrlParser: true, useUnifiedTopology: true});
 
 app.use(express.json());
 

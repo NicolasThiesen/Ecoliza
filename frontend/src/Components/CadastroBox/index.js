@@ -84,13 +84,6 @@ export default function CadastroBox() {
           <option value="Metais">Metais</option>
           <option value="Pilha">Pilha</option>
         </select>
-        <label for="input-imagem" className="labelimg">
-          Imagem do local
-        </label>
-        <div className="file">
-          <button>Foto do Local</button>
-          <input type="file" id="input-imagem" required></input>
-        </div>
         <button type="submit">Cadastrar</button>
       </form>
     </div>
