@@ -2,11 +2,13 @@ const express = require('express');
 const requireDir = require("require-dir");
 const cors = require("cors");
 const mongoose = require ('mongoose');
+const dotenv = require("dotenv");
 
+dotenv.config();
 
 const app = express();
 
-mongoose.connect('mongodb+srv://user:wzk9ENLkehcjRuf6@7week-mxm99.mongodb.net/Ecoliza?retryWrites=true&w=majority',{useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(process.env.DATA_CONNECT,{useNewUrlParser: true, useUnifiedTopology: true});
 
 app.use(express.json());
 

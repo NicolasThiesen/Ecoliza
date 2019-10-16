@@ -7,19 +7,31 @@
     font-size: 11px;
 }
 .search{
-    margin: 10px 20px;;
+    width: 23%;
+    margin: 10px auto;
+    text-align: center;
 }
 .search input{
     width: 150px;
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 20px;
-    font-size: 16px;
+    font-size: 15px;
     background-color: white;
-    background-image: url('../../img/search-icon.png');
+    background-image:url('../../img/search-24px.svg');
     background-position: 12px 6px; 
     background-repeat: no-repeat;
-    padding: 8px 10px 8px 40px;
+    padding: 8px 10px 9px 40px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
+}
+.search input:focus{
+    width: 100%;
+    margin: 0 5%;
+}
+.marker-btn{
+    border: none;
+    color: rgb(43, 134, 0);
+    background: none;
+
 }

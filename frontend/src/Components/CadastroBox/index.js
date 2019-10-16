@@ -1,26 +1,8 @@
 import React from 'react'
-import PlacesAutocomplete, {
-  geocodeByAddress,
-  getLatLng
-} from 'react-places-autocomplete'
-
+import InputAuto from "../InputAucomplete"
 import './style.css'
 
 export default function CadastroBox() {
-  const [address, setAddress] = React.useState('')
-  const [coordinates, setCoordinates] = React.useState({
-    lat: null,
-    lng: null
-  })
-
-  const handleSelect = async address => {
-    const results = await geocodeByAddress(address)
-
-    const latLang = await getLatLng(results[0])
-    console.log(address, latLang)
-    setAddress(address)
-    setCoordinates(latLang)
-  }
 
   return (
     <div className="box">
@@ -29,50 +11,7 @@ export default function CadastroBox() {
       </div>
       <form>
         <label>Endereço</label>
-        <PlacesAutocomplete
-          value={address}
-          onChange={setAddress}
-          onSelect={handleSelect}
-        >
-          {({
-            getInputProps,
-            suggestions,
-            getSuggestionItemProps,
-            loading
-          }) => (
-            <div>
-              <input
-                {...getInputProps({
-                  placeholder: 'Procurar',
-                  className: 'location-search-input'
-                })}
-              />
-
-              <div className="autocomplete-dropdown-container">
-                {loading && <div>Loading...</div>}
-                {suggestions.map(suggestion => {
-                  const className = suggestion.active
-                    ? 'suggestion-item--active'
-                    : 'suggestion-item'
-                  // inline style for demonstration purpose
-                  const style = suggestion.active
-                    ? { backgroundColor: '#fafafa', cursor: 'pointer' }
-                    : { backgroundColor: '#ffffff', cursor: 'pointer' }
-                  return (
-                    <div
-                      {...getSuggestionItemProps(suggestion, {
-                        className,
-                        style
-                      })}
-                    >
-                      <span>{suggestion.description}</span>
-                    </div>
-                  )
-                })}
-              </div>
-            </div>
-          )}
-        </PlacesAutocomplete>
+        <InputAuto/>
         <label for="input-nome">Nome do Local</label>
         <input type="text" id="input-nome" required autoFocus></input>
         <label>Tipo de lixo reciclado:</label>
