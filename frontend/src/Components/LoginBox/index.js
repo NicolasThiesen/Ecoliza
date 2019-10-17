@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import {VisibilityOutlinedIcon,VisibilityOffOutlinedIcon} from '@material-ui/icons/VisibilityOutlined';
 import './style.css'
-import { async } from 'q';
 
 export default function LoginBox() {
 

@@ -21,7 +21,7 @@ module.exports = {
         res.header("adm-token",token).send(token);
     },
     async update(req,res){
-        const salt = await bcrypt.genSalt(10);
+        const salt = await bcrypt.genSalt(12);
         const hashedPassword = await bcrypt.hash(req.params.password, salt)
         const admin = await Admin.findOneAndUpdate({username: req.params.user}, {password: hashedPassword},{new:true});;
         return res.json({mensagem:"Admin foi atualizado com sucesso.",content:admin});

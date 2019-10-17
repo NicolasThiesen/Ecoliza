@@ -9,11 +9,8 @@ export default function Header() {
         <h1>Ecoliza</h1>
       </Link>
       <div className="buttons">
-        <Link to="/cadastro">
-          <button>Novo Ponto de Coleta</button>
-        </Link>
         <Link to="/lugares">
-          <a href="/lugares">Pontos de Coleta</a>
+          <button>Pontos de Coleta</button>
         </Link>
       </div>
     </div>

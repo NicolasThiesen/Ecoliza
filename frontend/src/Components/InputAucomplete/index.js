@@ -20,6 +20,8 @@ export default function InputAucomplete() {
         setCoordinates(latLang);
       }
   return (
+    <>
+    <h1>{process.env.REACT_APP_GOOGLE_TOKEN}</h1>
     <PlacesAutocomplete
           value={address}
           onChange={setAddress}
@@ -64,5 +66,6 @@ export default function InputAucomplete() {
             </div>
           )}
         </PlacesAutocomplete>
+        </>
   );
 }

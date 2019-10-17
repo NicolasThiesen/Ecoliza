@@ -20,7 +20,6 @@ export default function Map()  {
     async function fetchData() {
       const res = await api.get("/ponto/all");
       setMarket(res.data);
-      console.log(res.data);
       
     }
     fetchData();
