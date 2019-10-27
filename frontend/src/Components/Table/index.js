@@ -33,7 +33,7 @@ export default function Table() {
                 <th scope="row">{ponto.name}</th>
                 <td>{ponto.adress}</td>
                 <td>{ponto.description}</td>
-                <td>{ponto.trash_type.join("; ")}</td>
+                <td>{ponto.trash_type.join(", ")}.</td>
               </tr>  
             ))}
           

@@ -1,54 +1,3 @@
-.header{
-    width:100%;
-    height: 7%;
-    background:#006b2b;
-    color: white;
-    text-align: center;
-    margin-bottom: 15%; 
-}
-h2{
-    padding: 3% 0; 
-    font-size: 25px;
-}  
-.box{
-      margin: 5% 35%;
-      height: 50%;
-      width: 30%;
-      color: #1c6134;
-      border: 1px solid #1c6134;
-      border-radius:5px;
-  }
-  input{
-      font-size: 15px;
-      padding: 7px;
-      display: inline-block;
-      border: none;
-      border-bottom: 1px solid #1c6134;
-      width: 60%;
-      margin: 0 20%;
-      margin-bottom: 10%;
-  }
-  label{
-    display: inline-block;
-    font-size: 16px;
-    float:left;
-    margin-left: 20%;
-}
-.box button{
-    margin: 10% 36%;
-    margin-bottom: 10%;
-    cursor:pointer;
-    color: white;
-    padding: 10px 50px;
-    font-size: 17px;
-    background: #006b2b;
-    border:none;
-    border-radius: 3px;
-}
-.box button:hover{
-    background:#0d5b27;
-    color: whitesmoke;
-}
 #input-imagem {
     margin-top: 3%;
     border-bottom: none; 
@@ -62,4 +11,18 @@ select{
 }
 .labelimg{
     margin: 0 40%;
+}
+.box-error{
+    text-align: center;
+    display: inline-flex;
+    line-height: 20px;
+    width: 200px;
+    margin: 10px 10%;
+    padding: 0 20px;
+    background: #fd6767;
+    border-radius: 2px ;
+    color: black;
+}
+.error-msg{
+    padding-right: 10px;
 }

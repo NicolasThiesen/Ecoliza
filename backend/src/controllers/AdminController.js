@@ -17,7 +17,7 @@ module.exports = {
             if(!pass) return res.status(400).json({"error":"Login ou senha incorreto."})
 
         //Create and assign a token
-        const token = jwt.sign({_id:admin.id}, process.env.TOKEN_SECRET);
+        const token = jwt.sign({_id:admin.id}, process.env.TOKEN_SECRET, {expiresIn:"1h"});
         res.header("adm-token",token).send(token);
     },
     async update(req,res){

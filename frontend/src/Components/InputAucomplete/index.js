@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './styles.css';
 import PlacesAutocomplete, {
     geocodeByAddress,
@@ -21,7 +21,6 @@ export default function InputAucomplete() {
       }
   return (
     <>
-    <h1>{process.env.REACT_APP_GOOGLE_TOKEN}</h1>
     <PlacesAutocomplete
           value={address}
           onChange={setAddress}
@@ -32,7 +31,7 @@ export default function InputAucomplete() {
             suggestions,
             getSuggestionItemProps,
             loading
-          }) => (
+          }) => (  
             <div>
               <input
                 {...getInputProps({
@@ -41,7 +40,8 @@ export default function InputAucomplete() {
                 })}
               />
 
-              <div className="autocomplete-dropdown-container">
+              <div className="autocomplete-dropdown">
+                <div className="content">
                 {loading && <div>Loading...</div>}
                 {suggestions.map(suggestion => {
                   const className = suggestion.active
@@ -49,7 +49,7 @@ export default function InputAucomplete() {
                     : 'suggestion-item'
                   // inline style for demonstration purpose
                   const style = suggestion.active
-                    ? { backgroundColor: '#fafafa', cursor: 'pointer' }
+                    ? { backgroundColor: '#00a035', cursor: 'pointer' }
                     : { backgroundColor: '#ffffff', cursor: 'pointer' }
                   return (
                     <div
@@ -62,6 +62,7 @@ export default function InputAucomplete() {
                     </div>
                   )
                 })}
+                </div>
               </div>
             </div>
           )}

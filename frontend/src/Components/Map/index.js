@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import ReactMap, {GeolocateControl,NavigationControl,Marker,Popup} from "react-map-gl";
 import api from "../../services/api";
-import Bla from '../test'
+import Direction from "../../services/direction";
+import Search from '../Search'
+import ScatterplotOverlay from "../Direction";
+
+
 //Icons 
 import Room from '@material-ui/icons/Room';
 
@@ -9,11 +13,10 @@ import Room from '@material-ui/icons/Room';
 import "./style.css";
 
 
-
 export default function Map()  {
   const [market,setMarket] = useState([]);
+  const [direction,setdirectiom] = useState([]);
   const [filter,setFilter] = useState();
-  const [names,setNames] = useState([]);
   const [placeName,setPlaceName] = useState();
   const [selected,setSelected] = useState(null);
   useEffect (()=>{
@@ -25,14 +28,7 @@ export default function Map()  {
     fetchData();
     
   },[filter]);
-  const handleChange = async event => {
-    const name = event.target.value
-    if (name !== ""){
-      const res = await api.get(`/ponto/nome/${name}`)
-      setNames(res.data);
-      
-    }
-  };
+
 
   const geolocateStyle = {
     position: 'absolute',
@@ -52,7 +48,6 @@ export default function Map()  {
     return(
       
      <div>
-       
        <ReactMap 
       {...viewport}
       trackUserLocation={true}
@@ -62,21 +57,7 @@ export default function Map()  {
         setViewport(viewport);
       }}
       >
-        {/* Barra de pesquisa de um ponto */}
-        <div className="search">
-          {/* Input para pesquisa de um ponto pelo nome */}
-          <input placeholder="Digite o Ponto" onChange={handleChange}></input>
-          {/* Botões para pesquisa de pontos pelo tipo de reciclagem */}
-          <div className="dropdown">
-            {names.map(suggestion =>{
-            return (
-              <div>
-                <span>{suggestion.name}</span>
-              </div>
-            )
-            })}
-          </div>
-        </div>
+        <Search/>
 
         {/* Adiciona no mapa cada Ponto de reciclagem  */}
         {market.map(ponto => (
@@ -120,7 +101,8 @@ export default function Map()  {
         <div style={{position: 'absolute', right: 40, top:10}}>
           <NavigationControl />
         </div>
-       </ReactMap>
+
+        </ReactMap>
        
      </div>
     )

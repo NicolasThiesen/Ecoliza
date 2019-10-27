@@ -1,0 +1,12 @@
+.autocomplete-dropdown{
+    position: relative;
+    width: 250px;
+    margin: 0 auto;
+    margin-top: -40px ;
+    color: black;
+    padding: 10px;
+}
+.content{
+    position: absolute;
+    border-radius: 2px;
+}

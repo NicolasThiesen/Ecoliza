@@ -1,30 +1,22 @@
 import React from "react"; 
 
-import { isAuthenticated } from "./Autenticacion"; 
+import history from "../Tools/history"
 
-import { Switch, Route, BrowserRouter, Redirect } from 'react-router-dom'
+import { Switch, Route, Router } from 'react-router-dom'
 
 // Pages
 import { Cadastro, Lugares, Home, LoginAdm } from 'Pages'
 
-const PrivateRoute = ({component: Component, ...rest }) => (
-    <Route {...rest} render={props => (
-        isAuthenticated() ? (
-            <Component {...props}/>
-        ):(
-            <Redirect to={{ pathname:"/adm", state:{from:props.location}}}/>
-        )
-    )}></Route>
-)
+import PrivateRoute from "../Tools/PrivateRoute";
 
 const Routes = () => (
-    <BrowserRouter>
-      <Switch>
+    <Router history={history}>
+      <Switch >
         <Route path="/" exact component={Home}></Route>
         <PrivateRoute path="/cadastro" component={Cadastro}></PrivateRoute>
         <Route path="/lugares" component={Lugares}></Route>
         <Route path="/adm" component={LoginAdm}></Route>
       </Switch>
-    </BrowserRouter>
+    </Router>
 )
 export default Routes;

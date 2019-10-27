@@ -2,23 +2,27 @@
     height: 70px;
     background: #f5f5f5;
     padding: 15px 50px;
-    line-height: 35px;
   }
   .main-header .buttons{
     float:right;
     display:flex;
     margin-right: 50px ;
   }
-a{
-    text-decoration: none;
+.main-header a{
+  text-decoration: none;
+}
+.main-header .icon a{
     padding: 0 15px;
     font-size: 17px;  
     margin-top: 20px;
     width: 200px;
   }
  
-  .main-header button{
-    width: 200px;
+  .main-header .buttons a{
+    margin-bottom: 40px ;
+  }
+  .main-header .buttons button{
+    width: 170px;
     padding: 0 0;
     height: 35px;
     background: none;
@@ -39,9 +43,30 @@ a{
   }
 h1{
     float: left;
-    margin: 20px 150px;
+    margin: 20px 10%;
 }
 h1:hover{
     background: #e5faec;
 }
-
+.mobile{
+  display: none;
+}
+@media (max-width:1000px){
+  .buttons{
+    color: ;;    
+  }
+  .MuiSvgIcon-root {
+    font-size: 2rem!important;
+  }
+  .mobile{
+      cursor: pointer;
+      display: block;
+  }   
+  .main-header .buttons button{
+      display: none;
+  }
+}
+.item{
+  color: black;
+  cursor: pointer;
+}
