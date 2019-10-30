@@ -1,0 +1,15 @@
+.link a {
+  text-decoration: none;
+}
+
+.title {
+  color: #fafafa;
+}
+
+.title:hover {
+  color: #bdbdbd;
+}
+
+.text {
+  color: #212121;
+}

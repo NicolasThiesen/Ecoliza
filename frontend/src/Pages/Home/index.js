@@ -50,7 +50,6 @@ export const Home = () => {
       >
         <Search />
 
-        {/* Adiciona no mapa cada Ponto de reciclagem  */}
         {market.map(ponto => (
           <Marker
             key={ponto._id}
@@ -68,7 +67,7 @@ export const Home = () => {
             </button>
           </Marker>
         ))}
-        {/* Poup up aparece quando a seleção do Lugar/Point muda */}
+
         {selected ? (
           <Popup
             latitude={selected.location[0]}
