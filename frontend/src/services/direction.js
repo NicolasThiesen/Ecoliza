@@ -1,6 +1,6 @@
-import axios from "axios";
+import axios from 'axios'
 
 const direction = axios.create({
-    baseURL: "https://api.mapbox.com/directions/v5/mapbox/driving",
+  baseURL: 'https://api.mapbox.com/directions/v5/mapbox/driving'
 })
-export default direction; 
+export default direction
