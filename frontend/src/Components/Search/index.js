@@ -4,7 +4,6 @@ import './styles.css'
 
 export default function Search() {
   const [focus, setFocus] = useState(false)
-  const [data, setData] = useState([])
   const [names, setNames] = useState([])
 
   const handleClick = event => {

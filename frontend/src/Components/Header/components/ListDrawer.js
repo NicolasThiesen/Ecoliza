@@ -1,12 +1,6 @@
 import React from 'react'
 
-import {
-  List,
-  ListItem,
-  ListItemText,
-  ListItemIcon,
-  Icon
-} from '@material-ui/core'
+import { List, ListItem, ListItemText, ListItemIcon } from '@material-ui/core'
 import { Inbox } from '@material-ui/icons'
 import { Link } from 'Components'
 
