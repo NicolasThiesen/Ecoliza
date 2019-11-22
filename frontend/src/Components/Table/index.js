@@ -15,7 +15,7 @@ export default function Table() {
     
   },[]);
   return (
-    <>
+    <div className="page-table">
       <h2>Lista de Lugares Cadastrados</h2>
       <div >
         <table className="table">
@@ -40,6 +40,6 @@ export default function Table() {
           </tbody>
         </table>
       </div>
-    </>
+    </div>
   )
 }

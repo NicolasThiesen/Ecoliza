@@ -18,7 +18,7 @@ h3{
       border: 1px solid #1c6134;
       border-radius:5px;
   }
-  input{
+  .box input{
       font-size: 15px;
       padding: 7px;
       display: inline-block;
@@ -28,10 +28,9 @@ h3{
       margin: 0 20%;
       margin-bottom: 10%;
   }
-  label{
+  .box label{
     display: inline-block;
     font-size: 16px;
-    float:left;
     margin-left: 20%;
 }
 .box button{
@@ -53,7 +52,7 @@ h3{
     margin-top: 3%;
     border-bottom: none; 
 }   
-select{
+.box select{
     text-align: center;
     margin: 4% 36%;
     padding: .375rem .75rem;

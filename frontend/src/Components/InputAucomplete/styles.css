@@ -1,12 +1,54 @@
-.autocomplete-dropdown{
-    position: relative;
-    width: 250px;
-    margin: 0 auto;
-    margin-top: -40px ;
-    color: black;
-    padding: 10px;
+.search{
+    width: 34%;
+    margin: 10px auto;
+    text-align: center;
 }
-.content{
-    position: absolute;
+.search input{
+    z-index: 100;
+    height: 40px;
+    width: 270px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    font-size: 17px;
+    background-color: white;
+    background-image:url('../../img/search-24px.svg');
+    background-position: 11px 16px; 
+    background-repeat: no-repeat;
+    padding: 8px 20px 9px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+.search input:focus{
+    width: 100%;
+}
+.dropdown{
+    z-index: 100;
     border-radius: 2px;
+    background: white;
+    width: 90%;
+    margin-left: 10% ;
+}
+.dropdown div:active{
+    background: rgb(24, 105, 36);
+}
+.dropdown div:hover{
+    background: rgb(2, 170, 69);
+}
+@media (min-width: 400px) and (max-width:800px){
+    .search{
+        width: 270px;
+    }
+}
+@media (max-width:400px){
+    .search{
+        width: 250px;
+        margin: 17px 50px;
+    }
+    .search input{
+        width: 250px;
+        height: 40px;
+        font-size: 15px;
+        background-position: 10px 8px;
+    }
 }

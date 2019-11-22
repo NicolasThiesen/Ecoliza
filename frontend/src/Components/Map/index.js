@@ -14,6 +14,7 @@ import "./style.css";
 
 
 export default function Map()  {
+  const [darkStyle,setDarkSyle] = useState(false)
   const [market,setMarket] = useState([]);
   const [direction,setdirectiom] = useState([]);
   const [filter,setFilter] = useState();
@@ -32,13 +33,13 @@ export default function Map()  {
 
   const geolocateStyle = {
     position: 'absolute',
-    top: 0,
-    left: 0,
+    bottom: 105,
+    right: 0,
     margin: 17
   };
 
     const [viewport,setViewport] = useState({
-      height: '100vh',
+      height: 'calc(100vh - 80px)',
       width: '100vw',
       latitude:-27.5776516,
       longitude: -48.5121398,
@@ -51,14 +52,15 @@ export default function Map()  {
        <ReactMap 
       {...viewport}
       trackUserLocation={true}
-      mapStyle = "mapbox://styles/nicolasmt/ck1fejr3145k91cqp2qhw4wla"
+      mapStyle = {
+         darkStyle ? "mapbox://styles/nicolasmt/ck1fejr3145k91cqp2qhw4wla" : "mapbox://styles/nicolasmt/ck2hmyt471nm11cp3ckoexjjm"
+      }
       mapboxApiAccessToken={process.env.REACT_APP_MAP_TOKEN} 
       onViewportChange={viewport => {
         setViewport(viewport);
       }}
       >
         <Search/>
-
         {/* Adiciona no mapa cada Ponto de reciclagem  */}
         {market.map(ponto => (
           <Marker
@@ -93,12 +95,14 @@ export default function Map()  {
           </Popup>
         ): null}
         {/* Botão de geolocalização do usuário */}
+        
         <GeolocateControl
           style={geolocateStyle}
           positionOptions={{enableHighAccuracy: true, timeout:6000}}
           trackUserLocation={true}
         />
-        <div style={{position: 'absolute', right: 40, top:10}}>
+        <div style={{position: 'absolute', right: 17, bottom:25}}>
+
           <NavigationControl />
         </div>
 

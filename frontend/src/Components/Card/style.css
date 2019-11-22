@@ -1,0 +1,46 @@
+.card {
+    background: var(--main-color);
+    max-width: 400px;
+    margin: 40px 0;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    box-sizing: border-box;
+    padding: 25px;
+    text-align: center;
+    color: white!important;
+  }
+  
+
+ .card .product {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+.card .product button{
+  border-radius: 3px;
+  padding: 8px 12px;
+  color: #D18B49;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+  
+  .card .title {
+    margin: 20px 0 12px 0;
+    font-size: 24px;
+  }
+  .img-content{
+    margin: 0 auto;
+    background: white;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+  }
+  .card img{
+    margin: 15% auto;
+    height: 70%;
+    width: 70%;
+  }

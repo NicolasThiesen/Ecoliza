@@ -26,9 +26,9 @@ export default function Search() {
     /* Barra de pesquisa de um ponto */
     <div className="search">
         {/* Input para pesquisa de um ponto pelo nome */}
-        <input placeholder="Digite o Ponto" onChange={handleChange} onFocus={()=>{setFocus(true)}} onBlur={()=>{setFocus(!focus)}}></input>
+        <input placeholder="Digite um Ponto de Coleta" onChange={handleChange} onFocus={()=>{setFocus(true)}} onBlur={()=>{setFocus(!focus)}}></input>
         {/* Botões para pesquisa de pontos pelo tipo de reciclagem */}
-        {focus && (
+        {true && (
             <div className="dropdown"> 
                 {names.map(suggestion =>{
                 return (

@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+:root{
+    --main-color:#00a035;
+}
 *{
     margin: 0;
     padding: 0;
@@ -6,7 +9,7 @@
     box-sizing: 0;
 }
 body{
-    font-family: 25px, 'Merriweather', serif;
+    font-family: 'Roboto', sans-serif!important;
     -webkit-font-smoothing: antialiased !important;
 
 }

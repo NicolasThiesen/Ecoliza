@@ -7,20 +7,20 @@
     border-color: grey;
     border-collapse: collapse;
 }
-thead {
+.page-table thead {
     display: table-header-group;
     vertical-align: middle;
     border-color: inherit;
     color: #fff;
-    background-color: #212529;
+    background-color: #00a035;
     border-color: #32383e;
 }
-tr {
+.page-table  tr {
     display: table-row;
     vertical-align: inherit;
     border-color: inherit;
 }
-th {
+.page-table th {
     text-align: inherit;
     
 }
@@ -33,11 +33,12 @@ th {
     vertical-align: top;
     border-top: 1px solid #dee2e6;
 }
-td{
+.page-table  td{
     display: table-cell;
 }
-h2{
-    margin-top: 1%; 
+.page-table  h2{
+    margin-top: 3%; 
     text-align: center;
     font-size: 35px;
+    color: #00a035;
 }

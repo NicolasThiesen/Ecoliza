@@ -1,7 +1,8 @@
 .main-header{
-    height: 70px;
-    background: #f5f5f5;
-    padding: 15px 50px;
+    height: 60px;
+    background: #ffffff;
+    padding: 4px 80px 2px 80px;
+    border-bottom: 1px solid #000000;
   }
   .main-header .buttons{
     float:right;
@@ -11,25 +12,26 @@
 .main-header a{
   text-decoration: none;
 }
-.main-header .icon a{
-    padding: 0 15px;
-    font-size: 17px;  
-    margin-top: 20px;
-    width: 200px;
+.icon {
+  float: left;
+}
+.main-header .icon img{
+    width: 80px;
+    height: 58px;
   }
- 
-  .main-header .buttons a{
-    margin-bottom: 40px ;
-  }
+ .buttons{
+  margin-top: 12px;
+ }
+
   .main-header .buttons button{
-    width: 170px;
-    padding: 0 0;
+    text-align: center;
+    padding-right:30px ;
     height: 35px;
     background: none;
-    color: #00a035;
-    border: 1px solid;
-    border-radius: 3px;
+    color: #000000;
+    border: none;
     font-size: 17px;
+    font-weight: bold!important;
   }
 .main-header a,button:hover{
     cursor: pointer;
@@ -43,7 +45,7 @@
   }
 h1{
     float: left;
-    margin: 20px 10%;
+    margin: 0 10%;
 }
 h1:hover{
     background: #e5faec;
@@ -52,8 +54,8 @@ h1:hover{
   display: none;
 }
 @media (max-width:1000px){
-  .buttons{
-    color: ;;    
+  .main-header .icon img{
+    margin-left:-50px ;
   }
   .MuiSvgIcon-root {
     font-size: 2rem!important;
@@ -65,8 +67,17 @@ h1:hover{
   .main-header .buttons button{
       display: none;
   }
+  .main-header .buttons{
+    margin-right: -50px;
+  }
 }
 .item{
   color: black;
   cursor: pointer;
+}
+.actual-page{
+  color: #00a035;
+}
+.main-header div .MuiSvgIcon-root{
+  fill: #017931!important;
 }
