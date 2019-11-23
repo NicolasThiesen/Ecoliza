@@ -27,6 +27,8 @@ class Home extends Component {
         </Grid>
       </>
     )
+
   }
 }
+
 export default Home

@@ -1,4 +1,29 @@
-.row-cards{
-    width: 100%;
-    display: inline-block;
+.popup{
+    text-align: center;
+}
+.popup h2{
+    font-size: 15px;
+    margin-top: -10px ;
+}
+.popup p{
+    margin-top: 5px ;
+    font-size: 11px;
+}
+
+.marker-btn{
+    border: none;
+    color: rgb(43, 134, 0);
+    background: none;
+
+}
+.popup button{
+    margin: 2% auto;
+    color: black!important;
+    background: chartreuse;
+    border: 1px solid rgb(0, 102, 31);
+    font-size: 10px;
+    padding: 5px;
+}
+.popup button:hover{
+    color: black!important;
 }
