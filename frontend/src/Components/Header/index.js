@@ -6,7 +6,6 @@ import Drawer from '@material-ui/core/Drawer';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import LaunchIcon from '@material-ui/icons/Launch';
 import ListIcon from '@material-ui/icons/List';
 import Divider from '@material-ui/core/Divider';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
@@ -77,47 +76,9 @@ export default function Header() {
             </ListItem>
 
           </Link>
-        </Toolbar>
-      </AppBar>
-
-      <nav className={classes.drawer}>
-        <Hidden smUp implementation="css">
-          <Drawer
-            variant="temporary"
-            anchor={theme.direction === 'rtl' ? 'right' : 'left'}
-            open={mobileOpen}
-            onClose={handleDrawerToggle}
-            classes={{
-              paper: classes.drawerPaper
-            }}
-            ModalProps={{
-              keepMounted: true
-            }}
-          >
-            <IconButton
-              onClick={handleDrawerToggle}
-              className={classes.closeMenuButton}
-            >
-              <Close />
-            </IconButton>
-            <ListDrawer />
-          </Drawer>
-        </Hidden>
-        <Hidden xsDown implementation="css">
-          <Drawer
-            className={classes.drawer}
-            variant="permanent"
-            classes={{
-              paper: classes.drawerPaper
-            }}
-          >
-            <div className={classes.toolbar} />
-            <ListDrawer />
-          </Drawer>
-        </Hidden>
-      </nav>
+       </List>
+       </Drawer>
     </div>
   )
-})
+}
 
-export default Header

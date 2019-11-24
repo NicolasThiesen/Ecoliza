@@ -4,8 +4,7 @@ class Home extends Component {
   render() {
     return (
       <>
-        <Header />
-        <Map />
+          <Map />
         
       </>
     )

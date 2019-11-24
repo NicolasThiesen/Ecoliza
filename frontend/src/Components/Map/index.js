@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import ReactMap, {GeolocateControl,NavigationControl,Marker,Popup} from "react-map-gl";
 import api from "../../services/api";
-import Direction from "../../services/direction";
 import Search from '../Search'
-import ScatterplotOverlay from "../Direction";
+
 
 
 //Icons 
