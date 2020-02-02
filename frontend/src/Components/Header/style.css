@@ -7,8 +7,11 @@
   .main-header .buttons{
     float:right;
     display:flex;
-    margin-right: 50px ;
+    margin-right: 150px ;
   }
+.main-header .MuiSvgIcon-root{
+  margin-top: 5px;
+}
 .main-header a{
   text-decoration: none;
 }
@@ -53,12 +56,17 @@ h1:hover{
 .mobile{
   display: none;
 }
+.MuiSwitch-colorSecondary.Mui-checked + .MuiSwitch-track{
+  background-color: black!important;
+}
 @media (max-width:1000px){
   .main-header .icon img{
     margin-left:-50px ;
   }
   .MuiSvgIcon-root {
     font-size: 2rem!important;
+    margin-right: 10px;
+    margin-left: 10px;
   }
   .mobile{
       cursor: pointer;
@@ -79,5 +87,5 @@ h1:hover{
   color: #00a035;
 }
 .main-header div .MuiSvgIcon-root{
-  fill: #017931!important;
+  fill: #53c967!important;
 }

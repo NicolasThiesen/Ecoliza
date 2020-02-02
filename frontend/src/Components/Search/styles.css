@@ -15,22 +15,31 @@
     background-position: 12px 12px; 
     background-repeat: no-repeat;
     padding: 8px 20px 9px 40px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
+    -webkit-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
 }
 .search input:focus{
     width: 100%;
 }
-.dropdown{
+
+.filter{
+    display: none;
+    width: 90%;
+    height: 60px;
+    background: rgb(0, 0, 0);
+    border-radius: 2px;
+    margin-left: 5% ;
+}
+.search .dropdown{
     border-radius: 2px;
     background: white;
     width: 90%;
-    margin-left: 10% ;
+    margin-left: 5% ;
 }
-.dropdown div:active{
+.search .dropdown div:active{
     background: rgb(24, 105, 36);
 }
-.dropdown div:hover{
+.search .dropdown div:hover{
     background: #02aa45;
 }
 @media (min-width: 400px) and (max-width:800px){

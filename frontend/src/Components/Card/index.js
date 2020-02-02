@@ -1,11 +1,11 @@
-import React from 'react';
-import './style.css';
+import React from 'react'
+import './style.css'
 
 export default function Card({img,title,text}) {
   return (
     <div className="card">
         <div className="img-content">
-            <img src={img}></img>
+            <img src={img} alt="icon"></img>
         </div>
         <h2 className="title">
             {title}
@@ -14,5 +14,5 @@ export default function Card({img,title,text}) {
             {text}
         </p>
     </div>
-  );
+  )
 }

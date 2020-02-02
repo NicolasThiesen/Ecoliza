@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import './styles.css';
+import React, {useState} from 'react'
+import './styles.css'
 import PlacesAutocomplete, {
     geocodeByAddress,
     getLatLng
@@ -11,13 +11,13 @@ export default function InputAucomplete() {
     const [coordinates, setCoordinates] = React.useState({
         lat: null,
         lng: null
-    });
+    })
 
     const handleSelect = async address => {
-        const results = await geocodeByAddress(address);
-        const latLang = await getLatLng(results[0]);
-        setAddress(address);
-        setCoordinates(latLang);
+        const results = await geocodeByAddress(address)
+        const latLang = await getLatLng(results[0])
+        setAddress(address)
+        setCoordinates(latLang)
       }
   return (
     <>
@@ -68,5 +68,5 @@ export default function InputAucomplete() {
           )}
         </PlacesAutocomplete>
         </>
-  );
+  )
 }

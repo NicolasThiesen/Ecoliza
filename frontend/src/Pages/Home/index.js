@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import Oleo from "img/oleo.png"
-import { HomeContent,Card } from 'Components';
-import Pneu from "img/pneu.png";
-import Madeira from "img/madeira.png";
-import Tijolo from "img/tijolo.png";
-import Bateria from "img/bateria.png";
-import Eletronico from "img/eletronico.png";
-import Sofa from "img/sofa.png";
-import Eletrodomestico from "img/eletrodomestico.png";
-import "./style.css";
-import Grid from '@material-ui/core/Grid';
+import { HomeContent,Card } from 'Components'
+import Pneu from "img/pneu.png"
+import Madeira from "img/madeira.png"
+import Tijolo from "img/tijolo.png"
+import Bateria from "img/bateria.png"
+import Eletronico from "img/eletronico.png"
+import Sofa from "img/sofa.png"
+import Eletrodomestico from "img/eletrodomestico.png"
+import "./style.css"
+import Grid from '@material-ui/core/Grid'
 
 class Home extends Component {
   render() {

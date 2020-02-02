@@ -1,19 +1,18 @@
 import React, {useEffect,useState} from 'react'
-import api from "../../services/api";
+import api from "../../services/api"
 
 import './style.css'
 
 export default function Table() {
-  const [data,setData] = useState([]);
+  const [data,setData] = useState([])
   useEffect (()=>{
     async function fetchData() {
-      const res = await api.get("/ponto/all");
-      console.log(res.data);
+      const res = await api.get("/ponto/all")
       setData(res.data)
     }
-    fetchData();
+    fetchData()
     
-  },[]);
+  },[])
   return (
     <div className="page-table">
       <h2>Lista de Lugares Cadastrados</h2>

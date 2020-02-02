@@ -1,4 +1,4 @@
-import React from "react"; 
+import React from "react" 
 
 import history from "../Tools/history"
 
@@ -7,7 +7,7 @@ import { Header } from 'Components'
 // Pages
 import { Cadastro, Lugares, Home, LoginAdm, MapPage } from 'Pages'
 
-import PrivateRoute from "../Tools/PrivateRoute";
+import PrivateRoute from "../Tools/PrivateRoute"
 
 const Routes = () => (
 
@@ -22,4 +22,4 @@ const Routes = () => (
       </Switch>
     </Router>
 )
-export default Routes;
+export default Routes
