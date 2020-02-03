@@ -19,9 +19,13 @@ import { withStyles } from '@material-ui/core/styles'
 import Brightness3Icon from '@material-ui/icons/Brightness3'
 import WbSunnyIcon from '@material-ui/icons/WbSunny'
 
-export default function Header() {
+export default function Header(props) {
   const [open, setOpen] = React.useState(false)
   const [dark,setDark] = React.useState(false)
+  React.useEffect(()=>{
+    props.darkStyle({dark: dark})
+  },[dark])
+  
   const handleDrawerOpen = () => {
     setOpen(true)
   }

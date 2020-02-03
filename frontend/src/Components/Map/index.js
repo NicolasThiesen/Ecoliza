@@ -12,8 +12,8 @@ import Room from '@material-ui/icons/Room'
 import "./style.css"
 
 
-export default function Map()  {
-  const [darkStyle,setDarkSyle] = useState(false)
+export default function Map(props)  {
+  const [darkStyle,setDarkSyle] = useState()
   const [market,setMarket] = useState([])
   const [filter,setFilter] = useState()
   const [selected,setSelected] = useState(null)
@@ -50,7 +50,9 @@ export default function Map()  {
     }
     setTimeout(()=>{setCamera([0,null])})
   },[data])
-
+  useEffect (() => {
+    setDarkSyle(props.darkStyle)
+  },[props.darkStyle])
   const geolocateStyle = {
     position: 'absolute',
     bottom: 105,

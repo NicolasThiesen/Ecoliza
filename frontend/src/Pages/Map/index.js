@@ -1,12 +1,9 @@
 import React, { Component } from 'react'
-import { Header, Map } from 'Components'
+import { Map } from 'Components'
 class Home extends Component {
   render() {
     return (
-      <>
-          <Map />
-        
-      </>
+      <Map darkStyle={this.props.darkStyle} />  
     )
   }
 }

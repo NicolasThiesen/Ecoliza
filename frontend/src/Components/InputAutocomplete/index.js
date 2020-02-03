@@ -6,9 +6,9 @@ import PlacesAutocomplete, {
   } from 'react-places-autocomplete'
 
 export default function InputAucomplete() {
-    const [address, setAddress] = React.useState('')
+    const [address, setAddress] = useState('')
 
-    const [coordinates, setCoordinates] = React.useState({
+    const [coordinates, setCoordinates] = useState({
         lat: null,
         lng: null
     })
