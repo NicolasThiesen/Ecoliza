@@ -120,11 +120,6 @@ export default function Map(props)  {
         ): null}
         {/* Botão de geolocalização do usuário */}
         
-        <GeolocateControl
-          style={geolocateStyle}
-          positionOptions={{enableHighAccuracy: true, timeout:6000}}
-          trackUserLocation={true}
-        />
         <div style={{position: 'absolute', right: 17, bottom:25}}>
 
           <NavigationControl />

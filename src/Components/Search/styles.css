@@ -23,12 +23,24 @@
 }
 
 .filter{
-    display: none;
+    display: block;
     width: 90%;
-    height: 60px;
-    background: rgb(0, 0, 0);
+    height: 70px;
+    background: white;
     border-radius: 2px;
     margin-left: 5% ;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+.filter div{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid black;
+    
+
 }
 .search .dropdown{
     border-radius: 2px;
